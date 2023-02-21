@@ -1,0 +1,42 @@
+@import "_theme_a";
+//@import "_theme_b";
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  color: $primary-font-color;
+
+  div {
+    width: 100px;
+    height: 80px;
+    border: 1px solid grey;
+    font-family: $box-font;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0em 0em 2em 1em;
+    border-radius: $border-radius-custom;
+    &.base {
+      background-color: $primary-background-color;
+    }
+    &.important {
+      background-color: darken($primary-background-color, 15%);
+    }
+    &.warning {
+      background-color: lighten($primary-background-color, 30%);
+    }
+    &.box-shadow-custom {
+      box-shadow: $box-shadow-custom;
+    }
+  }
+  p {
+    &.principal-font {
+      font-family: $primary-font;
+    }
+    &.secondary-font {
+      font-family: $secondary-font;
+      font-weight: $font-weight-secondary;
+      letter-spacing: $font-spacing-secondary;
+    }
+  }
+}
